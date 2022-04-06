@@ -8,37 +8,100 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <style>
-        .myGrid{
+        .myGrid {
             display: grid;
             grid-template-columns: 4fr 1fr;
             grid-template-rows: 1fr 3fr;
             gap: 10px;
         }
-        #first{
+
+        #first {
             background-color: yellow;
         }
-        #second{
+
+        #second {
             background-color: green;
         }
-        #third{
+
+        #third {
             background-color: red;
         }
-        #fourth{
+
+        #fourth {
             background-color: blue;
         }
-        img { 
-            width: 300px;
+
+        img {
+            width: 200px;
         }
-    
+
+        @media (max-width:600px) {
+            p {
+                background-color: pink;
+            }
+
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width:600px) {
+            p {
+                background-color: skyblue;
+            }
+
+            .desktop {
+                display: block;
+            }
+
+            .mobile {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <input type="button" value="버튼1"><br>
+    <input><br>
+    <script>
+        function numbering(){
+            for(let i=0;i<5;i++){
+                console.log(i)
+            }
+        }
+        function red(){
+            let button = document.querySelector("input")
+            button.style.backgroundColor = "red"
+        }
+        
+        // let button = document.querySelector("input")
+        // button.addEventListener("click",
+        //     function(e){
+        //         alert("clicked!")
+        // })
+
+        let button = document.querySelector("input")
+        button.addEventListener("input",
+            function(e){
+                console.log(e.target.value)
+        })
+
+    </script>
     <input type="date"><br>
     <input type="month"><br>
     <input type="week"><br>
     <input type="time"><br>
     <input type="datetime-local">
+
+    <!-- <input type="button" value="click" onclick="alert('안녕하세요?')">
+    <p onclick="alert('안녕하세요?')">눌러보세요!</p><br>
+    <input type="button" value="버튼" onclick="numbering()"><br>
+    <input type="button" value="버튼" onclick="red()"> -->
 
     <div class="myGrid">
         <div id="first">1번 영역</div>
@@ -46,18 +109,20 @@
         <div id="third">3번 영역</div>
         <div id="fourth">4번 영역</div>
     </div>
-    
-    
+    <img class="desktop" src="instagramcopy_image/profile.jpg">
+
+    <p>화면에 어떻게 표시되나요?</p>
+
+
     <div>
-        git add .
-        git commit -m ""
+        git add .<br>
+        git commit -m ""<br>
         git push origin master
 
         Git add .
     </div><br>
 
-    <img class="first" src="instagramcopy_image/profile.jpg">
-    <img class="second" src="instagramcopy_image/profile.jpg">
+    <img class="mobile" src="instagramcopy_image/profile.jpg">
 </body>
 
 </html>
