@@ -63,35 +63,12 @@
             }
         }
     </style>
+    <script src="./instagramcopy_js/testscript.js"></script>
 </head>
 
 <body>
     <input type="button" value="버튼1"><br>
     <input><br>
-    <script>
-        function numbering(){
-            for(let i=0;i<5;i++){
-                console.log(i)
-            }
-        }
-        function red(){
-            let button = document.querySelector("input")
-            button.style.backgroundColor = "red"
-        }
-        
-        // let button = document.querySelector("input")
-        // button.addEventListener("click",
-        //     function(e){
-        //         alert("clicked!")
-        // })
-
-        let button = document.querySelector("input")
-        button.addEventListener("input",
-            function(e){
-                console.log(e.target.value)
-        })
-
-    </script>
     <input type="date"><br>
     <input type="month"><br>
     <input type="week"><br>
@@ -112,6 +89,40 @@
     <img class="desktop" src="instagramcopy_image/profile.jpg">
 
     <p>화면에 어떻게 표시되나요?</p>
+    <p onclick="hi()">click here</p>
+    
+    <p>
+        keydown <input id="keydown">
+    </p>
+    <p>
+        change <input id="change">
+    </p>
+    <p>
+        input <input id="input">
+    </p><br>
+
+    <div>
+        <strong>이름</strong><span id="nameHere">None</span>
+        <input id="nameEditButton" type="button" value="수정">
+    </div>
+
+    <div id="editNameField" style="display: none;">
+        <input id="newName" type="text" value="새 이름 입력">
+        <input id="okButton" type="button" value="확인">
+    </div>
+    
+    <br><button>test</button>
+    <button onmouseover="red(event)" onmouseleave="blue(event)">HERE!!</button>
+    <button>test</button><br>
+
+    <input id="test01" type="button" value="getAttribute"><br>
+    <input id="test02" type="button" value="setAttribute"><br>
+
+    <img id="test03" src="./instagramcopy_image/hl 1.jpg" width="400px">
+    <input id="test04" type="button" value="고양이 더 줘!">
+
+    <p id="test05">추출 대상 text</p>
+    <input id="test06" type="button" value="JS 출동!">
 
 
     <div>
