@@ -44,7 +44,7 @@ function hi() {
 // 이벤트 종류는 "DOMContentLoaded" 입니다.
 document.addEventListener("DOMContentLoaded",
     // 이벤트 핸들러입니다.
-    // HTML 코드가 로딩된 다음 비동기적으로 수행할 작                                                                                                        업들입니다.
+    // HTML 코드가 로딩된 다음 비동기적으로 수행할 작업들입니다.
     function (e) {
         //     // id가 keydown인 태그를 찾아 keydown 변수에 저장합니다.
         //     let keydown = document.querySelector("#keydown")
